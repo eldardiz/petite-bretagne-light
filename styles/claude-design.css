@@ -56,6 +56,9 @@
   /* red is the only accent — kill all gold */
   --mustard: var(--red);
   --mustard-soft: var(--red-deep);
+  /* --ink-warm is used ONLY as a background (warm cards: location meta box,
+     reservation form, warm panels). Remap it to off-white so no card is maroon. */
+  --ink-warm: #f7f7f5;
 }
 
 /* base page */
@@ -113,6 +116,16 @@
   background: linear-gradient(180deg, rgba(0,0,0,0.48), rgba(0,0,0,0.7));
 }
 [data-theme="light"] .underlay-nav__dark { background-color: rgba(0,0,0,0.5); }
+
+/* Remaining dark-RED surfaces -> light. */
+/* Slide-out nav menu: white panel, dark text (links inherit), no red glow */
+[data-theme="light"] .underlay-nav__menu { background: #ffffff; color: #141414; }
+[data-theme="light"] .underlay-nav__menu::before { background: none; }
+/* Hero frame: the 16px padding + rounded inner were maroon (var(--ink)) -> white */
+[data-theme="light"] .hero,
+[data-theme="light"] .hero-inner { background: #ffffff; }
+/* tiny verified-chip dot on Instagram cards was maroon -> neutral */
+[data-theme="light"] .insta-cb-card .chip .dot { background: #141414; }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
