@@ -1,14 +1,30 @@
-# Mockup Receipt — Petite Bretagne
+# Mockup Receipt — Petite Bretagne (LIGHT variant)
 
-Speculative Axamo revamp mockup, spawned from the **Editorial · Warm** archetype.
+Speculative Axamo revamp mockup. This is the **LIGHT** variant: a clone of the
+dark Editorial mockup re-skinned to white + black with RED as the only accent.
 Built 2026-06-01.
 
 ## Live
 
-- **Production URL:** https://petite-bretagne.vercel.app
-- **Repo:** https://github.com/eldardiz/petite-bretagne
-- **Vercel project:** eldardizs-projects/petite-bretagne
-- **Local:** `vibe-coding/mockups/petite-bretagne/` (`npm run dev`)
+- **Production URL:** https://petite-bretagne-light.vercel.app
+- **Repo:** https://github.com/eldardiz/petite-bretagne-light
+- **Vercel project:** eldardizs-projects/petite-bretagne-light
+- **Local:** `vibe-coding/mockups/petite-bretagne-light/` (`npm run dev`)
+- **Dark sibling:** https://petite-bretagne.vercel.app (repo eldardiz/petite-bretagne)
+
+## Light theme (how it differs from the dark mockup)
+
+- `app/layout.tsx` sets `data-theme="light"` on `<html>`.
+- `styles/claude-design.css` has an expanded `[data-theme="light"]` block:
+  white / off-white surfaces, near-black text, RED on buttons + all accents,
+  gold/mustard mapped to red (`--mustard: var(--red)`), photo overlays
+  neutralized from maroon (`rgba(48,17,15,..)`) to neutral black, navbar logo
+  flips white-over-hero -> black-when-scrolled, footer white with black logo.
+- Everything else (content, photos, real logo, Instrument Serif, Axamo credit)
+  is identical to the dark mockup.
+- Note: the hero/CTA are photographs with a neutral dark gradient (so the white
+  display headline keeps contrast); the hero interior shot is warm-toned by
+  nature. Easy to brighten or swap if a cooler hero is wanted.
 
 ## Lead
 
